@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PadiSehat AI</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+
+   <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <!-- MODERN NOTIFICATION -->
+    <div id="notification" class="notification"></div>
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <div class="logo">
+
+                🌿 PadiSehat AI
+
+            </div>
+
+            <div class="menu-toggle" id="menuToggle">
+                ☰
+            </div>
+
+            <div class="nav-menu">
+
+                <a
+                    onclick="showSection('berandaSection')"
+                >
+                    Beranda
+                </a>
+
+                <a
+                    onclick="showSection('tentangSection')"
+                >
+                    Tentang
+                </a>
+
+                <a
+                    onclick="showSection('teknologiSection')"
+                >
+                    Teknologi
+                </a>
+
+                <a
+                    onclick="showSection('deteksiSection')"
+                >
+                    Deteksi
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section
+        id="berandaSection"
+        class="main-section active"
+    >
+
+        <div class="hero-container">
+
+            <!-- LEFT -->
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    🌱 AI Powered Detection
+
+                </div>
+
+                <h1 class="hero-title">
+
+                    Deteksi Penyakit
+                    <br>
+
+                    Daun <span>Padi</span>
+                    <br>
+
+                    Secara Otomatis
+
+                </h1>
+
+                <p class="hero-description">
+
+                    Sistem berbasis Deep Learning untuk mendeteksi
+                    penyakit daun padi dengan cepat, akurat dan
+                    mudah digunakan oleh petani modern.
+
+                </p>
+
+                <!-- BUTTON -->
+
+                <div class="hero-buttons">
+
+                    <a
+                        onclick="showSection('deteksiSection')"
+                        class="btn-primary"
+                    >
+
+                        🔍 Mulai Deteksi
+
+                    </a>
+
+                    <a
+                        onclick="showSection('teknologiSection')"
+                        class="btn-secondary"
+                    >
+
+                        Pelajari Teknologi
+
+                    </a>
+
+                </div>
+
+                <!-- STATS -->
+
+                <div class="hero-stats">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            🌿
+
+                        </div>
+
+                        <div class="stat-number">
+
+                            4
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            Jenis Penyakit
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            🎯
+
+                        </div>
+
+                        <div class="stat-number">
+
+                            95%+
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            Akurasi AI
+
+                        </div>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+
+                            ⏱
+
+                        </div>
+
+                        <div class="stat-number">
+
+                            &lt;1s
+
+                        </div>
+
+                        <div class="stat-label">
+
+                            Waktu Deteksi
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-- =========================
+         TENTANG
+    ========================== -->
+
+    <section
+        id="tentangSection"
+        class="main-section"
+    >
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Tentang Sistem
+
+            </h2>
+
+            <p class="section-description">
+
+                Sistem AI untuk membantu petani mendeteksi
+                penyakit daun padi secara otomatis menggunakan
+                teknologi Deep Learning.
+
+            </p>
+
+            <!-- KEMAMPUAN SISTEM -->
+
+            <div class="tentang-grid">
+
+                <div class="tentang-card">
+
+                    <div class="tentang-icon">
+                        📷
+                    </div>
+
+                    <h3>Upload Gambar</h3>
+
+                    <p>
+                        Sistem mendukung upload gambar daun padi
+                        untuk dianalisis menggunakan AI.
+                    </p>
+
+                </div>
+
+                <div class="tentang-card">
+
+                    <div class="tentang-icon">
+                        🤖
+                    </div>
+
+                    <h3>Analisis AI</h3>
+
+                    <p>
+                        Sistem menggunakan teknologi Deep Learning
+                        untuk mendeteksi penyakit daun padi.
+                    </p>
+
+                </div>
+
+                <div class="tentang-card">
+
+                    <div class="tentang-icon">
+                        📊
+                    </div>
+
+                    <h3>Probabilitas Penyakit</h3>
+
+                    <p>
+                        Sistem menampilkan tingkat probabilitas
+                        dari hasil deteksi penyakit.
+                    </p>
+
+                </div>
+
+                <div class="tentang-card">
+
+                    <div class="tentang-icon">
+                        📚
+                    </div>
+
+                    <h3>Riwayat Deteksi</h3>
+
+                    <p>
+                        Hasil deteksi dapat disimpan
+                        sebagai riwayat analisis AI.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ALUR KERJA -->
+
+            <div class="alur-section">
+
+                <h3 class="alur-title">
+                    Alur Kerja Sistem
+                </h3>
+
+                <div class="alur-grid">
+
+                    <div class="alur-card">
+
+                        <span>01</span>
+
+                        <h4>Upload Gambar</h4>
+
+                        <p>
+                            Pengguna mengupload gambar daun padi.
+                        </p>
+
+                    </div>
+
+                    <div class="alur-card">
+
+                        <span>02</span>
+
+                        <h4>Preprocessing</h4>
+
+                        <p>
+                            Sistem memproses gambar sebelum dianalisis AI.
+                        </p>
+
+                    </div>
+
+                    <div class="alur-card">
+
+                        <span>03</span>
+
+                        <h4>Analisis CNN</h4>
+
+                        <p>
+                            Model Deep Learning menganalisis pola penyakit.
+                        </p>
+
+                    </div>
+
+                    <div class="alur-card">
+
+                        <span>04</span>
+
+                        <h4>Hasil Deteksi</h4>
+
+                        <p>
+                            Sistem menampilkan hasil prediksi penyakit.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- STATISTIK -->
+
+            <div class="statistik-section">
+
+                <div class="statistik-card">
+
+                    <h2>4</h2>
+
+                    <p>
+                        Jenis Penyakit
+                    </p>
+
+                </div>
+
+                <div class="statistik-card">
+
+                    <h2>95%+</h2>
+
+                    <p>
+                        Akurasi Model AI
+                    </p>
+
+                </div>
+
+                <div class="statistik-card">
+
+                    <h2>&lt;1s</h2>
+
+                    <p>
+                        Waktu Analisis
+                    </p>
+
+                </div>
+
+                <div class="statistik-card">
+
+                    <h2>AI</h2>
+
+                    <p>
+                        Deep Learning
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         TEKNOLOGI
+    ========================== -->
+
+    <section
+        id="teknologiSection"
+        class="main-section"
+    >
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Teknologi Yang Digunakan
+
+            </h2>
+
+            <p class="section-description">
+
+                Sistem dibangun menggunakan teknologi modern
+                AI dan Deep Learning.
+
+            </p>
+
+            <div class="teknologi-grid">
+
+                <div
+                    class="info-card"
+                    onclick="openTechModal('efficientnetModal')"
+                >
+
+                    <div class="info-icon">
+
+                        🧠
+
+                    </div>
+
+                    <h3>EfficientNetB0</h3>
+
+                    <p>
+
+                        Model CNN ringan dengan performa tinggi
+                        untuk klasifikasi citra.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="info-card"
+                    onclick="openTechModal('tensorflowModal')"
+                >
+
+                    <div class="info-icon">
+
+                        🤖
+
+                    </div>
+
+                    <h3>TensorFlow</h3>
+
+                    <p>
+
+                        Framework Deep Learning untuk training
+                        dan inference model.
+
+                    </p>
+
+                </div>
+
+                <div
+                    class="info-card"
+                    onclick="openTechModal('datasetModal')"
+                >
+
+                    <div class="info-icon">
+
+                        🗂️
+
+                    </div>
+
+                    <h3>Dataset Padi</h3>
+
+                    <p>
+
+                        Dataset penyakit daun padi
+                        yang dikumpulkan dan yang terjadi dilapangan.
+
+                    </p>
+
+                </div>
+
+                <div class="info-card" 
+                    id="cnnCard"
+                    onclick="openModal()"
+                >
+
+                    <div class="info-icon">
+
+                        🔬
+
+                    </div>
+
+                    <h3>CNN Architecture</h3>
+
+                    <p>
+
+                        Arsitektur AI untuk mengenali
+                        pola penyakit daun padi
+                        melalui analisis citra digital.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         DETEKSI
+    ========================== -->
+
+    <section
+        id="deteksiSection"
+        class="main-section"
+    >
+
+        <div class="container">
+
+            <h2 class="section-title">
+
+                Mulai Deteksi
+
+            </h2>
+
+            <p class="section-description">
+
+                Upload gambar daun padi untuk mendeteksi penyakit.
+
+            </p>
+
+            <!-- UPLOAD -->
+
+            <div class="upload-area">
+
+                <div class="upload-icon">
+
+                    ☁️
+
+                </div>
+
+                <h3>
+
+                    Upload Gambar Daun Padi
+
+                </h3>
+
+                <p>
+
+                    JPG, PNG atau JPEG
+
+                </p>
+
+                <label
+                    for="imageInput"
+                    class="upload-btn"
+                >
+
+                    Pilih Gambar
+
+                </label>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <p
+                    id="fileName"
+                    class="file-name"
+                >
+
+                    Belum ada file dipilih
+
+                </p>
+
+                <!-- PREVIEW -->
+
+                <div class="preview-wrapper">
+
+                    <div
+                        class="preview-card"
+                        id="previewCard"
+                    >
+
+                        <img
+                            id="previewImage"
+                            src=""
+                            alt="Preview"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button
+                class="detect-btn"
+                onclick="predictImage()"
+            >
+
+                🔍 Deteksi Penyakit
+
+            </button>
+
+            <!-- =========================
+                 LOADING AI MODERN
+            ========================== -->
+
+            <div
+                class="loading"
+                id="loading"
+                style="display:none;"
+            >
+
+                <div class="ai-loader">
+
+                    <div class="loader-circle"></div>
+
+                    <div class="loader-circle"></div>
+
+                    <div class="loader-circle"></div>
+
+                </div>
+
+                <h3 class="loading-title">
+
+                    AI Sedang Menganalisis...
+
+                </h3>
+
+                <p class="loading-text">
+
+                    Sistem Deep Learning sedang memproses
+                    gambar daun padi Anda untuk mendeteksi penyakit.
+
+                </p>
+
+            </div>
+
+            <!-- RESULT -->
+
+            <div
+                class="result-card"
+                id="resultCard"
+                style="display:none;"
+            >
+
+                <!-- LEFT -->
+
+                <div class="result-left">
+
+                    <div class="ai-badge">
+
+                        🌿 HASIL AI
+
+                    </div>
+
+                    <h2
+                        class="result-title"
+                        id="resultLabel"
+                    >
+
+                        Brown Spot
+
+                    </h2>
+
+                    <!-- CONFIDENCE -->
+
+                    <div class="confidence-modern">
+
+                        <div class="detect-time" id="detectTime">
+                            Deteksi dilakukan: -
+                        </div>
+
+                        <div class="confidence-header">
+
+                            <div class="confidence-label">
+
+                                Tingkat Akurasi AI
+
+                            </div>
+
+                            <div
+                                class="confidence-value"
+                                id="confidenceText"
+                            >
+
+                                98.50%
+
+                            </div>
+
+                        </div>
+
+                        <div class="confidence-bar">
+
+                            <div
+                                class="confidence-fill"
+                                id="confidenceFill"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="result-grid">
+
+                    <!-- DESKRIPSI -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            📖
+
+                        </div>
+
+                        <h3>Deskripsi</h3>
+
+                        <p id="diseaseDescription">-</p>
+
+                    </div>
+
+                    <!-- PENYEBAB -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            🦠
+
+                        </div>
+
+                        <h3>Penyebab</h3>
+
+                        <p id="diseaseCause">-</p>
+
+                    </div>
+
+                    <!-- PENANGANAN -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            💊
+
+                        </div>
+
+                        <h3>Penanganan</h3>
+
+                        <p id="diseaseSolution">-</p>
+
+                    </div>
+
+                    <!-- GEJALA -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            🔎
+
+                        </div>
+
+                        <h3>Gejala</h3>
+
+                        <p id="diseaseSymptoms">-</p>
+
+                    </div>
+
+                    <!-- PENCEGAHAN -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            🛡️
+
+                        </div>
+
+                        <h3>Pencegahan</h3>
+
+                        <p id="diseasePrevention">-</p>
+
+                    </div>
+
+                    <!-- TINGKAT BAHAYA -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            ⚠️
+
+                        </div>
+
+                        <h3>Tingkat Bahaya</h3>
+
+                        <p id="diseaseDanger">-</p>
+
+                    </div>
+
+                    <!-- TIPS -->
+
+                    <div class="result-box modern-box">
+
+                        <div class="result-icon">
+
+                            🌾
+
+                        </div>
+
+                        <h3>Tips Petani</h3>
+
+                        <p id="diseaseTips">-</p>
+
+                    </div>
+
+                   <!-- ACTION BUTTONS -->
+
+                    <div class="action-buttons">
+
+                        <button
+                            class="open-probability-btn"
+                            onclick="openProbabilityModal()"
+                        >
+
+                            📊 Lihat Semua Probabilitas
+
+                        </button>
+
+                        <button
+                            class="open-history-btn"
+                            onclick="openHistoryModal()"
+                        >
+
+                            📚 Lihat Riwayat Deteksi
+
+                        </button>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     PROBABILITY MODAL
+    ========================= -->
+
+    <div
+        class="probability-modal"
+        id="probabilityModal"
+    >
+
+        <div class="probability-modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeProbabilityModal()"
+            >
+                ✕
+            </button>
+
+            <h2 class="probability-modal-title">
+
+                📊 Semua Probabilitas Penyakit
+
+            </h2>
+
+            <div id="probabilityList"></div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     HISTORY MODAL
+    ========================= -->
+
+    <div
+        class="history-modal"
+        id="historyModal"
+    >
+
+        <div class="history-modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeHistoryModal()"
+            >
+                ✕
+            </button>
+
+            <h2 class="history-modal-title">
+
+                📚 Riwayat Deteksi AI
+
+            </h2>
+
+            <div
+                id="historyContainer"
+                class="history-grid"
+            >
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     CNN MODAL
+    ========================= -->
+
+    <div
+        id="cnnModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <!-- tombol close -->
+            <button
+                class="close-modal"
+                onclick="closeModal()"
+            >
+                &times;
+            </button>
+
+            <!-- isi modal -->
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    🔬
+                </div>
+
+                <h2>
+                    CNN Architecture
+                </h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>
+                    CNN (Convolutional Neural Network)
+                    adalah arsitektur Deep Learning
+                    yang digunakan untuk mengenali
+                    pola visual pada gambar secara
+                    otomatis.
+                </p>
+
+                <p>
+                    Pada sistem PadiSehat AI,
+                    CNN digunakan untuk
+                    menganalisis citra daun padi
+                    dan mengidentifikasi penyakit
+                    berdasarkan pola, warna,
+                    tekstur, dan bentuk bercak.
+                </p>
+
+                <h3>
+                    Cara Kerja CNN
+                </h3>
+
+                <div class="cnn-steps">
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            01
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Convolution Layer
+                            </h4>
+
+                            <p>
+                                Layer pertama bertugas membaca
+                                pola visual pada gambar daun
+                                seperti warna, tekstur, garis,
+                                dan bentuk bercak penyakit.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            02
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Pooling Layer
+                            </h4>
+
+                            <p>
+                                Sistem menyederhanakan informasi
+                                penting dari gambar agar proses
+                                analisis menjadi lebih cepat
+                                dan efisien.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            03
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Feature Extraction
+                            </h4>
+
+                            <p>
+                                CNN mulai mengenali ciri khusus
+                                penyakit daun padi berdasarkan
+                                pola yang telah dipelajari
+                                selama training model.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            04
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Classification
+                            </h4>
+
+                            <p>
+                                Setelah semua fitur dianalisis,
+                                sistem menentukan jenis penyakit
+                                daun padi dengan tingkat akurasi
+                                tinggi menggunakan AI.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     EFFICIENTNET MODAL
+    ========================= -->
+
+    <div
+        id="efficientnetModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeTechModal('efficientnetModal')"
+            >
+                &times;
+            </button>
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    🧠
+                </div>
+
+                <h2>
+                    EfficientNetB0
+                </h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>
+                    EfficientNetB0 adalah model CNN ringan
+                    dengan performa tinggi untuk klasifikasi citra.
+                </p>
+
+                <p>
+                    Model ini digunakan untuk meningkatkan
+                    kecepatan dan akurasi deteksi penyakit daun padi.
+                </p>
+
+                <h3>
+                    Keunggulan EfficientNetB0
+                </h3>
+
+                <div class="cnn-steps">
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            01
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Model Ringan
+                            </h4>
+
+                            <p>
+                                EfficientNetB0 memiliki ukuran model kecil
+                                sehingga proses deteksi menjadi cepat
+                                dan ringan dijalankan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            02
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Akurasi Tinggi
+                            </h4>
+
+                            <p>
+                                Model mampu mengenali pola penyakit daun
+                                padi dengan tingkat akurasi tinggi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            03
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Optimasi AI
+                            </h4>
+
+                            <p>
+                                Struktur model dioptimalkan untuk
+                                performa Deep Learning modern.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+    TENSORFLOW MODAL
+    ========================= -->
+
+    <div
+        id="tensorflowModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeTechModal('tensorflowModal')"
+            >
+                &times;
+            </button>
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    🤖
+                </div>
+
+                <h2>
+                    TensorFlow
+                </h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>
+                    TensorFlow adalah framework Deep Learning
+                    untuk training dan inference model AI.
+                </p>
+
+                <p>
+                    Framework ini membantu proses
+                    pengembangan sistem deteksi otomatis.
+                </p>
+
+                <h3>
+                    Fungsi TensorFlow
+                </h3>
+
+                <div class="cnn-steps">
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            01
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Training Model
+                            </h4>
+
+                            <p>
+                                TensorFlow digunakan untuk melatih
+                                model AI menggunakan dataset daun padi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            02
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Inference AI
+                            </h4>
+
+                            <p>
+                                Framework membantu proses prediksi
+                                penyakit secara otomatis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            03
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Integrasi Deep Learning
+                            </h4>
+
+                            <p>
+                                TensorFlow mempermudah integrasi
+                                model AI ke dalam sistem web dan aplikasi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+     DATASET MODAL
+    ========================= -->
+
+    <div
+        id="datasetModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="close-modal"
+                onclick="closeTechModal('datasetModal')"
+            >
+                &times;
+            </button>
+
+            <div class="modal-header">
+
+                <div class="modal-icon">
+                    🗂️
+                </div>
+
+                <h2>
+                    Dataset Padi
+                </h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <p>
+                    Dataset berisi citra daun padi sehat
+                    dan berbagai jenis penyakit daun padi.
+                </p>
+
+                <p>
+                    Dataset digunakan untuk proses
+                    training dan evaluasi model AI.
+                </p>
+
+                <h3>
+                    Komponen Dataset
+                </h3>
+
+                <div class="cnn-steps">
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            01
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Dataset Training
+                            </h4>
+
+                            <p>
+                                Dataset digunakan untuk melatih model AI
+                                mengenali penyakit daun padi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            02
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Variasi Penyakit
+                            </h4>
+
+                            <p>
+                                Dataset berisi berbagai jenis penyakit
+                                daun padi dari kondisi nyata lapangan.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="cnn-step-card">
+
+                        <div class="cnn-step-number">
+                            03
+                        </div>
+
+                        <div class="cnn-step-content">
+
+                            <h4>
+                                Validasi Model
+                            </h4>
+
+                            <p>
+                                Dataset digunakan untuk menguji akurasi
+                                dan performa model AI.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div>
+
+                <h3>
+
+                    🌿 PadiSehat AI
+
+                </h3>
+
+                <p>
+
+                    Sistem Deteksi Penyakit Daun Padi
+                    berbasis Deep Learning.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+<!-- JS -->
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
